@@ -492,15 +492,15 @@ func (c *ApiController) VerifyCode() {
 			authForm.Username = user.Phone
 		}
 	}
-
-	if user, err = object.GetUserByFields(authForm.Organization, authForm.Username); err != nil {
-		c.ResponseError(err.Error())
-		return
-	} else if user == nil {
-		c.ResponseError(fmt.Sprintf(c.T("general:The user: %s doesn't exist"), util.GetId(authForm.Organization, authForm.Username)))
-		return
+	if authForm.Type != "reset" {
+		if user, err = object.GetUserByFields(authForm.Organization, authForm.Username); err != nil {
+			c.ResponseError(err.Error())
+			return
+		} else if user == nil {
+			c.ResponseError(fmt.Sprintf(c.T("general:The user: %s doesn't exist"), util.GetId(authForm.Organization, authForm.Username)))
+			return
+		}
 	}
-
 	verificationCodeType := object.GetVerifyType(authForm.Username)
 	if verificationCodeType == object.VerifyTypePhone {
 		authForm.CountryCode = user.GetCountryCode(authForm.CountryCode)
