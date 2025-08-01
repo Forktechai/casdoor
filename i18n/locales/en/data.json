@@ -16,12 +16,14 @@
     "The account for provider: %s and username: %s (%s) does not exist and is not allowed to sign up as new account, please contact your IT support": "The account for provider: %s and username: %s (%s) does not exist and is not allowed to sign up as new account, please contact your IT support",
     "The account for provider: %s and username: %s (%s) is already linked to another account: %s (%s)": "The account for provider: %s and username: %s (%s) is already linked to another account: %s (%s)",
     "The application: %s does not exist": "The application: %s does not exist",
+    "The application: %s has disabled users to signin": "The application: %s has disabled users to signin",
     "The login method: login with LDAP is not enabled for the application": "The login method: login with LDAP is not enabled for the application",
     "The login method: login with SMS is not enabled for the application": "The login method: login with SMS is not enabled for the application",
     "The login method: login with email is not enabled for the application": "The login method: login with email is not enabled for the application",
     "The login method: login with face is not enabled for the application": "The login method: login with face is not enabled for the application",
     "The login method: login with password is not enabled for the application": "The login method: login with password is not enabled for the application",
     "The organization: %s does not exist": "The organization: %s does not exist",
+    "The organization: %s has disabled users to signin": "The organization: %s has disabled users to signin",
     "The provider: %s does not exist": "The provider: %s does not exist",
     "The provider: %s is not enabled for the application": "The provider: %s is not enabled for the application",
     "Unauthorized operation": "Unauthorized operation",
@@ -85,7 +87,7 @@
     "Your password has expired. Please reset your password by clicking \\\"Forgot password\\\"": "Your password has expired. Please reset your password by clicking \\\"Forgot password\\\"",
     "Your region is not allow to signup by phone": "Your region is not allow to signup by phone",
     "password or code is incorrect": "password or code is incorrect",
-    "password or code is incorrect, you have %d remaining chances": "password or code is incorrect, you have %d remaining chances",
+    "password or code is incorrect, you have %s remaining chances": "password or code is incorrect, you have %s remaining chances",
     "unsupported password type: %s": "unsupported password type: %s"
   },
   "enforcer": {
@@ -185,6 +187,7 @@
     "the user does not exist, please sign up first": "the user does not exist, please sign up first"
   },
   "webauthn": {
+    "Found no credentials for this user": "Found no credentials for this user",
     "Please call WebAuthnSigninBegin first": "Please call WebAuthnSigninBegin first"
   }
 }
